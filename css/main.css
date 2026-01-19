@@ -1,0 +1,72 @@
+/*
+How to write CSS rule:
+target { rule-name: rule-value; }
+
+Possible Target:
+- HTML element (<header>)
+- Elements w/ Assigned Class (.grid-box)
+- Elements w/ Assigned ID (#menu)
+
+Example:
+1. Change text color in a container with assigned class name "demo"
+.demo { 
+    color:red;
+}
+
+2. 2px black border with 15px padding all around for an element with assigned class name "box" in a container with assigned class name "grid-container"
+.grid-container .box {
+    border:2px solid black;
+    padding:15px;
+*/
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Header */
+header {
+    background-color: darkgreen;
+    color: white;
+    padding:15px;
+}
+header #logo { flex:1; text-align:left; font-size:20px; border:5px ridge white; padding:5px 15px;}
+header #slogan { flex:2; text-align:center; font-size:32px;}
+header #menu { flex:1; text-align:right;}
+header #menu a { color:white; text-decoration: none;}
+
+footer { background-color:black; padding:30px; text-align: center; color:white;}
+
+/* Content Starter */
+main { background-color: beige; padding:30px 100px;}
+main p { font-size: 16px;}
+main h1 { color:red; text-align: center; margin-bottom:30px;}
+main img { width:100%; margin-bottom:50px;}
+
+
+
+/* Flex Box Starter */
+/* REMEMBER 1: This is just to initiate flex display, you still need to assign rule to its children */
+.flex-container { 
+    display:flex; 
+    align-items:center;
+}
+
+/* Table Starter */
+#schedule-table { 
+    border-collapse:collapse;
+}
+#schedule-table > tbody > tr > th,
+#schedule-table > tbody> tr > td { 
+    border:1px solid black;
+}
+
+/* Grid Box Starter */
+/* REMEMBER 1: There are placeholders in the rule, please change them accordingly */
+/* REMEMBER 2: This is to initiate grid display, you still need to assign rules for its children to determine how many grid columns they take up respectively */
+.grid-container { 
+    display:grid; 
+    grid-template-columns:repeat([number of times],[unit]); 
+    gap:[value]
+}
